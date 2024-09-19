@@ -46,8 +46,8 @@ Je hebt de [vorige les](https://github.com/hogeschoolnovi/backend-spring-boot-te
 ### Belangrijk
 - Laat de _application.properties_ overeenkomen met de gegevens van `PgAdmin`
 - Je mag de volgende ResponseEntiteiten als return waardes gebruiken:
-  - `ResponseEntiteit.ok("television")`
-  - `ResponseEntiteit.created(null).body("television")`
+  - `ResponseEntiteit.ok(television)`
+  - `ResponseEntiteit.created(null).body(television)`
   - `ResponseEntiteit.noContent().build()`
 - Let er op dat je database-password niet hetzelfde password is dat je gebruikt voor je email, facebook of andere applicatie. Aangezien deze applicatie niet gedeployed hoeft te worden, kun je een makkelijk password kiezen als "password" of "banaan".
 
@@ -66,6 +66,8 @@ _Let op_: het is uitdagender om jouw eigen stappenplan te maken. Mocht je niet z
 10. Maak een nieuwe map aan in je project voor `repositories`
 11. Voeg aan deze map een nieuwe Interface toe genaamd `TelevisionRepository`
 12. Extend de _repository_ met de `JpaRepository` en geef de juiste attributen mee. (het type van het model en het type van het ID)
+13. Pas de methodes in je controller aan zodat deze gebruik maken van de Television klasse en de repository.
+14. Test je applicatie met postman en pgadmin. Kijk of je echt televisies kunt opslaan, ophalen, aanpassen en verwijderen.
 
 ## Bonus
 Een television heeft best veel variabelen, maar er zit nog weinig variatie in de types. Het zijn enkel Strings, Booleans of nummers. Probeer andere datatypes te gebruiken zoals:
